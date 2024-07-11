@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="\styles.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" type="text/css" crossorigin="anonymous">
+</head>
+<body>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+
+      html{
+        
+        max-width: auto;
+      }
+
+      .breadcrumb{
+        display: grid;
+        justify-content: center;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .breadcrumb a{
+        color: brown;
+      }
+
+      .breadcrumb a:visited{
+        color: blue;
+      }
+    
+        
+        
+      
+    </style>
+    
+    <header class="text-bg-secondary p-3">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <div class="d-flex flex-wrap align-items-center justify-content-between w-100">
+              <ul class="nav col-lg-auto me-lg-auto mb-2 justify-content-left mb-md-0" style="font-size: large;">
+                <li><a href="index.html" class="nav-link active px-5 text-black" style="font-size: large;">home</a></li>
+                <li class="my-2">
+                  <button type="button" class=" h1 btn collapsed border-0 text-white" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Contents</button>
+                  <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#typography">Typography</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#images">Images</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#tables">Tables</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#figures">Figures</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="contents.html">Contents</a></li>
+                  </ul>
+                </li>
+                <li class="my-2">
+                  <button type="button" class=" h1 btn collapsed border-0 text-white" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Forms</button>
+                  <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#overview">Overview</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#disabled-forms">Disabled forms</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#sizing">Sizing</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#input-group">Input group</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#floating-labels">Floating labels</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#validation">Validation</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="forms.html">Forms</a></li>
+                  </ul>
+                </li>
+                <li class="my-2">
+                  <button type="button" class=" h1 btn collapsed border-0 text-white" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#contents-collapse" aria-controls="contents-collapse">Components</button>
+                  <ul class="list-unstyled ps-3 collapse" id="contents-collapse">
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#accordion">Accordion</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#alerts">Alerts</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#badge">Badge</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#breadcrumb">Breadcrumb</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none  text-white" href="index.html/#buttons">Buttons</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#button-group">Button group</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#card">Card</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none  text-white" href="index.html/#carousel">Carousel</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#dropdowns">Dropdowns</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#list-group">List group</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#modal">Modal</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#navs">Navs</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#navbar">Navbar</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#pagination">Pagination</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#popovers">Popovers</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#progress">Progress</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#scrollspy">Scrollspy</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#spinners">Spinners</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#toasts">Toasts</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="index.html/#tooltips">Tooltips</a></li>
+                    <li><a class="d-inline-flex align-items-center rounded text-decoration-none text-white" href="components.html">Components</a></li>
+                  </ul>
+                </li>
+                <li class="my-2"><a class="d-inline-flex align-items-center rounded text-decoration-none text-white mt-100 h1 btn list-unstyled" href="other.html" style="font-size: small;">Other Resources</a></li>
+              </ul>
+              <div class="col-lg-4 col-md-4">
+                <form id="searchbar" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                  <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+<div>
+
+  <ol class="breadcrumb">
+    <li><a href="alerts.html" target="_blank">Alerts</a></li>
+    <li><a href="buttons.html" target="_blank">Button</a></li>
+    <li><a href="cards.html" target="_blank">cards</a></li>
+    <li><a href="carousel.html" target="_blank">Carousel</a></li>
+    <li><a href="components.html" target="_blank">Components</a></li>
+    <li><a href="contactForm.html" target="_blank">Contact Form</a></li>
+    <li><a href="contents.html" target="_blank">Contents</a></li>
+    <li><a href="greatlookingthings.html" target="_blank">greatlookingthings</a></li>
+    <li><a href="grids.html" target="_blank">grids</a></li>
+    <li><a href="icons.html" target="_blank">icons</a></li>
+    <li><a href="images.html" target="_blank">images</a></li>
+    <li><a href="modal.html" target="_blank">modal</a></li>
+    <li><a href="navbar.html" target="_blank">navbar</a></li>
+    <li><a href="spacing.html" target="_blank">spacing</a></li>
+    <li><a href="tables.html" target="_blank">tables</a></li>
+    <li><a href="typography.html" target="_blank">typography</a></li>
+    <li><a href="landingpage.html" target="_blank">landingpage</a></li>
+
+  </ol>
+</div>
+
+
+
+
+
+ 
+</body>
+
+</html>

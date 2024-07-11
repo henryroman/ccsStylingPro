@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+    <style>
+        [class*="col-"]{
+            border: 2px solid white;
+            padding: 1rem;
+            color: black;
+            background-color: aqua;
+        }
+
+
+    </style>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <header class="text-bg-secondary p-3">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <div class="d-flex flex-wrap align-items-center justify-content-between w-100">
+              <ul class="nav col-lg-auto me-lg-auto mb-2 justify-content-left mb-md-0" style="font-size: large;">
+                <li class="nav-link active px-5 text-black" id="current" style="font-size: large;"><a href="index.html" class="text-white text-decoration-none">home</a></li>
+                <li class="nav-link px-5"><a href="page2.html" class="text-white text-decoration-none">Contents</a></li>
+                <li class="nav-link px-5"><a href="page3.html" class="text-white text-decoration-none">Forms</a></li>
+                <li class="nav-link px-5"><a href="components.html" class="text-white text-decoration-none">Components</a></li>
+              </ul>
+              <div class="col-lg-4 col-md-4">
+                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                  <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <h1>page 3</h1>
+    <div class="container border">
+        <div class="row align-items-start" style="height: 500px;">
+            <div class="col-4">Col 1</div>
+            <div class="col-8">Col 2</div>
+        </div>
+    </div>
+</body>
+</html>
