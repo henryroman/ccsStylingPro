@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link href="\styles.css" rel="stylesheet" type="text/css"> -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" type="text/css" crossorigin="anonymous">
+    <link href="\styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" type="text/css" crossorigin="anonymous">
 </head>
 <body>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js">
+        document.getElementById('searchForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          const query = document.getElementById('searchInput').value;
+          fetch(`/search?query=${query}`)
+            .then(response => response.json())
+            .then(data => {
+              const resultsDiv = document.getElementById('searchResults');
+              resultsDiv.innerHTML = data.results.map(item => `<p>${item}</p>`).join('');
+            });
+        });
+    </script>
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -164,7 +175,7 @@
         </nav>
       </header>
         
-    <h1>My home page</h1>
+    <!-- <h1>My home page</h1>
     <main class="main">
         <p class="first">Hey my name is Henry. This is going to be the design for my personal website but for the sake of this exercise I will fill it with stock images and filler text. Im a back end programmer learning front end, hope you enjoy.</p>
            <h3> <p>Lectures on Religious Belief:</p> </h3>
@@ -176,13 +187,13 @@
                 While Wittgenstein did not write a comprehensive treatise on religious language, his philosophical approach, particularly the concept of language games, has significant implications for understanding religious discourse. His emphasis on the contextual and pragmatic aspects of meaning suggests that religious language functions within a specific form of life, with its own set of rules and practices that give it meaning.
             </p>
             <div class="grid">
-        <img src="https://files.worldwildlife.org/wwfcmsprod/images/Bornean_Orangutan_What_WWF_Is_Doing/story_full_width/6nlf9ufz08_Bornean_orangutan_8.1.2012_whatwwfisdoing_XL_247664.jpg" alt="Bornean Orangutan">
+        <img src="https://files.worldwildlife.org/wwfcmsprod/images/Bornean_Orangutan_What_WWF_Is_Doing/story_full_width/6nlf9ufz08_Bornean_orangutan_8.1.2012_whatwwfisdoing_XL_247664.jpg" alt="Bornean Orangutan"> -->
         <!-- <img style="max-width: min-content;" src="https://www.orangutans-sos.org/content/uploads/2022/02/D30I9156-copy.jpg" alt="Bornean Orangutan"> -->
-        <img src="https://www.orangutans-sos.org/content/uploads/2022/09/ORAS_023918.jpg" alt="Bornean Orangutan">
+        <!-- <img src="https://www.orangutans-sos.org/content/uploads/2022/09/ORAS_023918.jpg" alt="Bornean Orangutan"> -->
         <!-- <img src="https://www.orangutans-sos.org/content/uploads/2022/09/DSC9366.jpg" alt="Bornean Orangutan"> -->
-        <img src="https://www.orangutans-sos.org/content/uploads/2022/09/ORAS_023984.jpg" alt="Bornean Orangutan">
+        <!-- <img src="https://www.orangutans-sos.org/content/uploads/2022/09/ORAS_023984.jpg" alt="Bornean Orangutan">
         <img src="https://www.orangutans-sos.org/content/uploads/2022/09/ORAS_023772.jpg" alt="Bornean Orangutan"></div>
-    </main>
+    </main> -->
 
     <div>
       <div id="typography" class="bd-example-snippet bd-code-snippet">
